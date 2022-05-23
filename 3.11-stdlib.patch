@@ -1,0 +1,10 @@
+--- origsrc/Python-3.11.0b1/configure.ac	2022-05-23 19:26:45.971287900 +0200
++++ src/Python-3.11.0b1/configure.ac	2022-05-23 19:58:34.965242400 +0200
+@@ -6703,6 +6703,7 @@ AC_MSG_CHECKING([for additional Modules/
+ AS_CASE([$ac_sys_system],
+     [Emscripten], [MODULES_SETUP_STDLIB=Modules/Setup.stdlib],
+     [WASI], [MODULES_SETUP_STDLIB=Modules/Setup.stdlib],
++    [CYGWIN*], [MODULES_SETUP_STDLIB=Modules/Setup.stdlib],
+     [MODULES_SETUP_STDLIB=]
+ )
+ AC_MSG_RESULT([$MODULES_SETUP_STDLIB])
